@@ -12,7 +12,7 @@ const config = {
   botName: "Asistente Médico",
   initialMessages: [
     createChatBotMessage(
-      "¡Hola! Soy tu asistente virtual. Estoy aquí para ayudarte con tus servicios médicos. ¿Qué necesitas hoy?",
+      "¡Hola! Soy tu asistente virtual de salud. Estoy aquí para ayudarte con tus citas médicas y otros servicios. Entiendo que a veces estas tareas pueden ser complicadas, pero no te preocupes, te guiaré en cada paso. ¿Qué necesitas hacer hoy?",
       {
         widget: "taskOptions",
       }
