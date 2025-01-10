@@ -1,0 +1,162 @@
+/* Modo Día - Tamaño Mediano (por defecto) */
+.react-chatbot-kit-chat-container {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.react-chatbot-kit-chat-inner-container {
+  background-color: white;
+}
+
+.react-chatbot-kit-chat-header {
+  background-color: #0077b6;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.react-chatbot-kit-chat-input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.react-chatbot-kit-chat-input {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 16px;
+  outline: none;
+}
+
+.react-chatbot-kit-chat-btn-send {
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.react-chatbot-kit-chat-message-container {
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.react-chatbot-kit-chat-bot-message {
+  background-color: #0077b6;
+  color: white;
+  border-radius: 15px;
+  font-size: 1rem;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.react-chatbot-kit-chat-bot-message-arrow {
+  border-right-color: #0077b6 ;
+}
+
+
+
+
+.react-chatbot-kit-chat-user-message {
+  background-color: #b2dfdb;
+  color: #000;
+  border-radius: 15px;
+  font-size: 1rem;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+
+
+/* Tamaños pequeños */
+.text-small .react-chatbot-kit-chat-input,
+.theme-dark.text-small .react-chatbot-kit-chat-input {
+  font-size: 14px;
+}
+
+.text-small .react-chatbot-kit-chat-bot-message,
+.theme-dark.text-small .react-chatbot-kit-chat-bot-message,
+.text-small .react-chatbot-kit-chat-user-message,
+.theme-dark.text-small .react-chatbot-kit-chat-user-message {
+  font-size: 0.875rem;
+}
+
+/* Tamaños grandes */
+.text-large .react-chatbot-kit-chat-input,
+.theme-dark.text-large .react-chatbot-kit-chat-input {
+  font-size: 18px;
+}
+
+.text-large .react-chatbot-kit-chat-bot-message,
+.theme-dark.text-large .react-chatbot-kit-chat-bot-message,
+.text-large .react-chatbot-kit-chat-user-message,
+.theme-dark.text-large .react-chatbot-kit-chat-user-message {
+  font-size: 1.25rem;
+}
+
+/* Modo Noche */
+.theme-dark .react-chatbot-kit-chat-container {
+  background-color: #2c2c2c;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .react-chatbot-kit-chat-inner-container {
+  background-color: #2c2c2c;
+}
+
+.theme-dark .react-chatbot-kit-chat-header {
+  background-color: #3c3c3c;
+  color: #f4f4f4;
+}
+
+.theme-dark .react-chatbot-kit-chat-bot-message-arrow {
+  border-right-color: #444444 ;
+}
+
+.theme-dark .react-chatbot-kit-chat-input-container {
+  background-color: #3c3c3c;
+}
+
+.theme-dark .react-chatbot-kit-chat-input {
+  background-color: #555555;
+  color: white;
+  border: 1px solid #777777;
+}
+
+
+
+.theme-dark .react-chatbot-kit-chat-message-container {
+  font-family: Arial, sans-serif;
+}
+
+
+.theme-dark .react-chatbot-kit-chat-bot-message {
+  background-color: #444444;
+  color: #f4f4f4;
+  border-radius: 15px;
+  font-size: 1rem;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+.theme-dark .react-chatbot-kit-chat-input::placeholder {
+  color: white;
+}
+.theme-dark .react-chatbot-kit-chat-user-message {
+  background-color: #1e90ff;
+  color: #ffffff;
+  border-radius: 15px;
+  font-size: 1rem;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+

@@ -18,6 +18,15 @@ const config = {
       }
     ),
   ],
+
+  customComponents: {
+    botAvatar: () => (
+      <div style={{ fontSize: "2rem", margin: "0 10px" }}>🤖</div>
+    ),
+    userAvatar: () => (
+      <div style={{ fontSize: "2rem", margin: "0 10px" }}>👤</div>
+    ),
+  },
   state: {
     expectingID: false, // Nueva bandera para controlar la solicitud de cédula
   },
