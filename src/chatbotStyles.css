@@ -1,3 +1,67 @@
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.floating-button {
+  background-color: #0077b6; /* Azul predeterminado */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.floating-button:hover {
+  background-color: #005f99; /* Azul más oscuro al pasar el cursor */
+  transform: scale(1.1);
+}
+
+.floating-button:active {
+  transform: scale(0.9);
+}
+
+.floating-button i {
+  font-size: 20px; /* Tamaño del icono */
+}
+
+.floating-button[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 60px; /* Ajuste para que el tooltip aparezca sobre el botón */
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+.floating-button[title]:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 55px;
+  right: 20px;
+  border: 5px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
 /* Modo Día - Tamaño Mediano (por defecto) */
 .react-chatbot-kit-chat-container {
   background-color: #f9f9f9;
@@ -64,9 +128,6 @@
   border-right-color: #0077b6 ;
 }
 
-
-
-
 .react-chatbot-kit-chat-user-message {
   background-color: #b2dfdb;
   color: #000;
@@ -75,8 +136,6 @@
   padding: 10px;
   margin-bottom: 5px;
 }
-
-
 
 /* Tamaños pequeños */
 .text-small .react-chatbot-kit-chat-input,
