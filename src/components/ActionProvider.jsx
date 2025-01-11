@@ -17,20 +17,20 @@ const ActionProvider = ({
 
   const handleScheduleAppointment = () => {
     const message = createChatBotMessage(
-      "¡Entendido! Vamos a programar tu cita médica. Este es el proceso que seguiremos:"
+      "¡Perfecto! Vamos a reservar tu viaje. Este es el proceso que seguiremos:"
     );
     const message1 = createChatBotMessage("1. Verificaremos tu identidad.");
-    const message2 = createChatBotMessage(
-      "2. Escogeremos el tipo de cita que necesitas."
-    );
+    const message2 = createChatBotMessage("2. Escogeremos el destino.");
     const message3 = createChatBotMessage(
-      "3. Seleccionaremos la ubicación y el horario."
+      "3. Seleccionaremos la fecha y la hora de tu viaje."
     );
-    const message4 = createChatBotMessage("4. Confirmaremos tu cita.");
-    const botMessage = createChatBotMessage(
-      "Perfecto, puedo ayudarte a programar una cita. Por favor, dime si es para ti o para otra persona.",
-      { widget: "patientOptions" }
+    const message4 = createChatBotMessage("4. Confirmaremos tu reserva.");
+    const message5 = createChatBotMessage(
+      "Si necesitas ayuda en cualquier momento, haz clic en el botón 'Ayuda'. O escribe la palabra 'asesor'."
     );
+    const botMessage = createChatBotMessage("¿Listo para empezar?", {
+      widget: "patientOptions",
+    });
     setState((prev) => ({
       ...prev,
       messages: [
@@ -40,13 +40,14 @@ const ActionProvider = ({
         message2,
         message3,
         message4,
+        message5,
         botMessage,
       ],
     }));
   };
   const handleViewAppointments = () => {
     const message = createChatBotMessage(
-      "Aquí están tus citas programadas: [listado de citas]"
+      "Aquí están tus reservas: [listado de reservas]"
     );
     setState((prevState) => ({
       ...prevState,
@@ -90,7 +91,7 @@ const ActionProvider = ({
       "¡Gracias! Tu información está segura conmigo. Ahora continuemos."
     );
     const botMessage = createChatBotMessage(
-      "¿Qué tipo de servicio médico necesitas? Selecciona una de las opciones:",
+      "¿Qué tipo de transporte desea? Selecciona una de las opciones:",
       { widget: "serviceOptions" }
     );
     setState((prevState) => ({
@@ -102,7 +103,7 @@ const ActionProvider = ({
   const handleSelectService = (service) => {
     setData({ ...data, service });
     const message = createChatBotMessage(
-      `Seleccionaste ${service}. Por favor, selecciona la ciudad o municipio donde deseas programar tu cita.`,
+      `Seleccionaste ${service}. Por favor, selecciona la ciudad o municipio donde deseas programar tu viaje.`,
       { widget: "locationOptions" }
     );
     setState((prevState) => ({
@@ -114,7 +115,7 @@ const ActionProvider = ({
   const handleSelectLocation = (location) => {
     setData({ ...data, location });
     const message = createChatBotMessage(
-      `Seleccionaste ${location}. Ahora selecciona el horario que más te convenga.`,
+      `Seleccionaste ${location}. Ahora selecciona el horario que más te convenga para el día de mañana.`,
       { widget: "timeOptions" }
     );
     setState((prevState) => ({
@@ -126,7 +127,7 @@ const ActionProvider = ({
   const handleSelectTime = (time) => {
     setData({ ...data, time });
     const message = createChatBotMessage(
-      `Cita confirmada: \nServicio: ${data.service} \nLugar: ${data.location} \nHora: ${time}. \n¿Es correcto?`,
+      `Destino confirmado: \nVehículo: ${data.service} \nLugar: ${data.location} \nHora: ${time}. \n¿Es correcto?`,
       {
         widget: "endOptions",
       }
@@ -139,11 +140,11 @@ const ActionProvider = ({
 
   const handleConfirmAppointment = () => {
     const message = createChatBotMessage(
-      `¡Cita programada con éxito! \nDetalles: \nServicio: ${data.service} \nLugar: ${data.location} \nHora: ${data.time}. ¿Hay algo más en lo que pueda ayudarte?`,
+      `¡Destino programado con éxito! \nDetalles: \nVehículo: ${data.service} \nLugar: ${data.location} \nHora: ${data.time}. ¿Hay algo más en lo que pueda ayudarte?`,
       { widget: "endOptions" }
     );
     const message2 = createChatBotMessage(
-      "¡Cita programada con éxito! Recibirás un mensaje de confirmación en tu celular. Si necesitas cancelar o modificar, estoy aquí para ayudarte. ¿Hay algo más que quieras hacer?"
+      "¡Destino programado con éxito! Recibirás un mensaje de confirmación en tu celular. Si necesitas cancelar o modificar, estoy aquí para ayudarte. ¿Hay algo más que quieras hacer?"
     );
     setState((prevState) => ({
       ...prevState,

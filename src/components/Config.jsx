@@ -9,10 +9,10 @@ import {
 } from "./OptionsWidget";
 
 const config = {
-  botName: "Asistente Médico",
+  botName: "Asistente de trasnporte",
   initialMessages: [
     createChatBotMessage(
-      "¡Hola! Soy tu asistente virtual de salud. Estoy aquí para ayudarte con tus citas médicas y otros servicios. Entiendo que a veces estas tareas pueden ser complicadas, pero no te preocupes, te guiaré en cada paso. ¿Qué necesitas hacer hoy?",
+      "¡Hola! Soy tu asistente virtual de viajes. Estoy aquí para ayudarte a reservar tus tiquetes de transporte intermunicipal y responder tus dudas. Sé que este proceso puede parecer complicado a veces, pero no te preocupes, te guiaré paso a paso. ¿En qué puedo ayudarte hoy?",
       {
         widget: "taskOptions",
       }

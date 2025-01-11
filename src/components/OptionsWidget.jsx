@@ -12,10 +12,10 @@ export const TaskOptions = ({ actionProvider }) => {
       }}
     >
       <button onClick={actionProvider.handleScheduleAppointment}>
-        Programar una cita médica
+        Reservar un viaje.
       </button>
       <button onClick={actionProvider.handleViewAppointments}>
-        Consultar citas ya programadas
+        Consultar una reserva existente.
       </button>
       <button onClick={actionProvider.handleTalkToAdvisor}>
         Hablar con un asesor
@@ -35,8 +35,8 @@ export const PatientOptions = ({ actionProvider }) => {
         padding: "20px",
       }}
     >
-      <button onClick={actionProvider.handleAskForID}>Para mí</button>
-      <button onClick={actionProvider.handleAskForID}>Para otra persona</button>
+      <button onClick={actionProvider.handleAskForID}>Si</button>
+      <button onClick={actionProvider.handleTalkToAdvisor}>No</button>
     </div>
   );
 };
@@ -52,20 +52,14 @@ export const ServiceOptions = ({ actionProvider }) => {
         padding: "20px",
       }}
     >
-      <button
-        onClick={() => actionProvider.handleSelectService("Medicina general")}
-      >
-        Medicina general
+      <button onClick={() => actionProvider.handleSelectService("Camioneta")}>
+        Camioneta
       </button>
-      <button
-        onClick={() => actionProvider.handleSelectService("Especialista")}
-      >
-        Especialista
+      <button onClick={() => actionProvider.handleSelectService("Bus")}>
+        Bus
       </button>
-      <button
-        onClick={() => actionProvider.handleSelectService("Exámenes médicos")}
-      >
-        Exámenes médicos
+      <button onClick={() => actionProvider.handleSelectService("Van")}>
+        Van o furgoneta
       </button>
     </div>
   );
@@ -82,14 +76,14 @@ export const LocationOptions = ({ actionProvider }) => {
         padding: "20px",
       }}
     >
+      <button onClick={() => actionProvider.handleSelectLocation("Ipiales")}>
+        Ipiales
+      </button>
       <button onClick={() => actionProvider.handleSelectLocation("Pasto")}>
         Pasto
       </button>
-      <button onClick={() => actionProvider.handleSelectLocation("Ipiales")}>
-        Popayán
-      </button>
       <button onClick={() => actionProvider.handleSelectLocation("Tumaco")}>
-        Cali
+        Tumaco
       </button>
     </div>
   );
@@ -157,6 +151,7 @@ TaskOptions.propTypes = {
 PatientOptions.propTypes = {
   actionProvider: PropTypes.shape({
     handleAskForID: PropTypes.func.isRequired,
+    handleTalkToAdvisor: PropTypes.func.isRequired,
   }).isRequired,
 };
 ServiceOptions.propTypes = {
